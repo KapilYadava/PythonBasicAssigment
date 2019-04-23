@@ -3,3 +3,22 @@
 # Example : 0, 1, 1, 2, 3, 5, 8,13,21,.....
 # a) Number of elements printed in the series should be N numbers, Where N is any +ve integer.
 # b) Generate the series until the element in the series is less than Max number.
+
+
+def fibonacci_series(number):
+    num1 = 0
+    num2 = 1
+    print(num1, num2, end=" ")
+    summation = 0
+    for i in range(1, number):
+        summation = num1 + num2
+        num1 = num2
+        num2 = summation
+        if summation < number:
+            print(summation, end=" ")
+            continue
+        else:
+            break
+
+
+fibonacci_series(21)
